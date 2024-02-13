@@ -121,3 +121,67 @@
         filming_location: "BedfordShire",
         country: "US"
     );
+
+
+Opinion.create!(
+    film_id: 1,
+    user: "Sam Pedro",
+    stars: 4,
+    review: "Really good!"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Peter Troll",
+    stars: 3,
+    review: "Ok movie"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Chris Bla",
+    stars: 5,
+    review: "The best ever!"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Suzan Something",
+    stars: 1,
+    review: "Worst Ever"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Axel Ontheway",
+    stars: 5,
+    review: "Really really good"
+);
+
+Opinion.create!(
+    film_id: 2,
+    user: "Mack Boe",
+    stars: 4,
+    review: "Ok movie"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Peter Troll",
+    stars: 2,
+    review: "The best ever!"
+);
+
+Opinion.create!(
+    film_id: 1,
+    user: "Rik van der Kroon",
+    stars: 3,
+    review: "Really good!"
+);
+
+
+Opinion.create!(
+    film_id: 1,
+    user: "Sam Pedro",
+    stars: 2
+);

@@ -1,12 +1,34 @@
+<%
+=begin%>
+ 
 <div class="row mt-5">
-  <%= form_tag(films_path, method: :get)  do %>
-    <%= text_field_tag :search, @search_term, placeholder: "Search here",
-      type: "text", autocomplete: 'on' %>
-    <%= submit_tag("Search") %>
-  <% end %>
+  <h5>Import Movies</h5>
+  <%!= form_tag films_import_films_path, method: :post, multipart: true do %>
+    <%!= file_field_tag :films_file, accept: ".csv" %>
+    <%!= submit_tag 'Import Movies', class: "btn btn-primary" %>
+  <%! end %>
 </div>
-<div class="row">
-  <div class="col-sm-2 mt-2">
+
+<div class="row mt-3">
+<h5>Import Reviews</h5>
+  <%!= form_tag reviews_import_films_path, method: :post, multipart: true do %>
+    <%!= file_field_tag :reviews_file, accept: ".csv" %>
+    <%!= submit_tag 'Import Reviews', class: "btn btn-primary" %>
+  <%! end %>
+</div> 
+<%
+=end%>
+
+<div class="row mt-5">
+<div class="col-md-3">
+  <%= form_tag(films_path, method: :get)  do %>
+      <%= text_field_tag :search, @search_term, placeholder: "Search here",
+        type: "text", autocomplete: 'on' %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+  
+  <div class="col-sm-2">
     <%= link_to "Clear", "#{films_path}", class: "btn btn-primary" %>
   </div>
 </div>

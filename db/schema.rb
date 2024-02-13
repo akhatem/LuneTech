@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_13_180836) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_13_195403) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_180836) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "opinions", force: :cascade do |t|
+    t.bigint "film_id"
+    t.string "user"
+    t.integer "stars"
+    t.text "review"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["film_id"], name: "index_opinions_on_film_id"
   end
 
 end
